@@ -4,6 +4,7 @@ import UppercaseSwapper from "./UppercaseSwapper";
 import LowercaseSwapper from "./LowercaseSwapper";
 import TitleCaseSwapper from "./TitleCaseSwapper";
 import CamelCaseSwapper from "./CamelCaseSwapper";
+import ConstantCaseSwapper from "./ConstantCaseSwapper";
 
 class CaseSwapperFactory {
   private static CASE_SWAPPERS_BY_TEXT_CASE = {
@@ -11,6 +12,7 @@ class CaseSwapperFactory {
     [TextCase.Lower]: new LowercaseSwapper(),
     [TextCase.Title]: new TitleCaseSwapper(),
     [TextCase.Camel]: new CamelCaseSwapper(),
+    [TextCase.Constant]: new ConstantCaseSwapper(),
   };
 
   public getCaseSwapper(textCase: TextCase): CaseSwapper {
