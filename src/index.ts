@@ -15,5 +15,6 @@ function print(text: string): void {
   console.log(`Camel   : ${app.swapCase(text, TextCase.Camel)}`);
   console.log(`Constant: ${app.swapCase(text, TextCase.Constant)}`);
   console.log(`Constant: ${app.swapCase(text, TextCase.Dot)}`);
+  console.log(`Constant: ${app.swapCase(text, TextCase.Kebab)}`);
   console.log();
 }
