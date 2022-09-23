@@ -18,5 +18,6 @@ function print(text: string): void {
   console.log(`Kebab   : ${app.swapCase(text, TextCase.Kebab)}`);
   console.log(`Pascal  : ${app.swapCase(text, TextCase.Pascal)}`);
   console.log(`Path    : ${app.swapCase(text, TextCase.Path)}`);
+  console.log(`Sentence: ${app.swapCase(text, TextCase.Sentence)}`);
   console.log();
 }
