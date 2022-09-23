@@ -7,3 +7,4 @@ console.log(text);
 console.log(app.swapCase(text, TextCase.Upper));
 console.log(app.swapCase(text, TextCase.Lower));
 console.log(app.swapCase(text, TextCase.Title));
+console.log(app.swapCase(text, TextCase.Camel));
