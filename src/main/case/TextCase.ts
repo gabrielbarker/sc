@@ -6,12 +6,12 @@ enum TextCase {
   Constant,
   Dot,
   Kebab,
-  // LowerFirst,
-  // Pascal,
+  Pascal,
   // Path,
   // Sentence,
   // Snake,
   // Swap,
+  // LowerFirst,
   // UpperFirst,
 }
 
