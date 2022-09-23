@@ -7,7 +7,7 @@ enum TextCase {
   Dot,
   Kebab,
   Pascal,
-  // Path,
+  Path,
   // Sentence,
   // Snake,
   // Swap,
