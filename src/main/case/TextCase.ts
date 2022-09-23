@@ -8,7 +8,7 @@ enum TextCase {
   Kebab,
   Pascal,
   Path,
-  // Sentence,
+  Sentence,
   // Snake,
   // Swap,
   // LowerFirst,
