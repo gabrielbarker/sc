@@ -7,6 +7,7 @@ import CamelCaseSwapper from "./CamelCaseSwapper";
 import ConstantCaseSwapper from "./ConstantCaseSwapper";
 import DotCaseSwapper from "./DotCaseSwapper";
 import KebabCaseSwapper from "./KebabCaseSwapper";
+import PascalCaseSwapper from "./PascalCaseSwapper";
 
 class CaseSwapperFactory {
   private static CASE_SWAPPERS_BY_TEXT_CASE = {
@@ -17,6 +18,7 @@ class CaseSwapperFactory {
     [TextCase.Constant]: new ConstantCaseSwapper(),
     [TextCase.Dot]: new DotCaseSwapper(),
     [TextCase.Kebab]: new KebabCaseSwapper(),
+    [TextCase.Pascal]: new PascalCaseSwapper(),
   };
 
   public getCaseSwapper(textCase: TextCase): CaseSwapper {
