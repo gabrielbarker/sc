@@ -11,6 +11,7 @@ import PascalCaseSwapper from "./PascalCaseSwapper";
 import PathCaseSwapper from "./PathCaseSwapper";
 import SentenceCaseSwapper from "./SentenceCaseSwapper";
 import SnakeCaseSwapper from "./SnakeCaseSwapper";
+import InvertCaseSwapper from "./InvertCaseSwapper";
 
 class CaseSwapperFactory {
   private static CASE_SWAPPERS_BY_TEXT_CASE = {
@@ -25,6 +26,7 @@ class CaseSwapperFactory {
     [TextCase.Path]: new PathCaseSwapper(),
     [TextCase.Sentence]: new SentenceCaseSwapper(),
     [TextCase.Snake]: new SnakeCaseSwapper(),
+    [TextCase.Invert]: new InvertCaseSwapper(),
   };
 
   public getCaseSwapper(textCase: TextCase): CaseSwapper {
