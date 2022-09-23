@@ -10,7 +10,7 @@ enum TextCase {
   Path,
   Sentence,
   Snake,
-  // Swap,
+  Invert,
   // LowerFirst,
   // UpperFirst,
 }
