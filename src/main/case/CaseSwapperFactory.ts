@@ -3,12 +3,14 @@ import TextCase from "./TextCase";
 import UppercaseSwapper from "./UppercaseSwapper";
 import LowercaseSwapper from "./LowercaseSwapper";
 import TitleCaseSwapper from "./TitleCaseSwapper";
+import CamelCaseSwapper from "./CamelCaseSwapper";
 
 class CaseSwapperFactory {
   private static CASE_SWAPPERS_BY_TEXT_CASE = {
     [TextCase.Upper]: new UppercaseSwapper(),
     [TextCase.Lower]: new LowercaseSwapper(),
     [TextCase.Title]: new TitleCaseSwapper(),
+    [TextCase.Camel]: new CamelCaseSwapper(),
   };
 
   public getCaseSwapper(textCase: TextCase): CaseSwapper {
