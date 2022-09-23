@@ -1,6 +1,7 @@
 enum TextCase {
   Upper,
   Lower,
+  Title,
   // Camel,
   // Constant,
   // Dot,
@@ -11,7 +12,6 @@ enum TextCase {
   // Sentence,
   // Snake,
   // Swap,
-  // Title,
   // UpperFirst,
 }
 
