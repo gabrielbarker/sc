@@ -9,7 +9,7 @@ enum TextCase {
   Pascal,
   Path,
   Sentence,
-  // Snake,
+  Snake,
   // Swap,
   // LowerFirst,
   // UpperFirst,
