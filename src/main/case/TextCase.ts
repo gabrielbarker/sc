@@ -4,7 +4,7 @@ enum TextCase {
   Title,
   Camel,
   Constant,
-  // Dot,
+  Dot,
   // Kebab,
   // LowerFirst,
   // Pascal,
