@@ -10,6 +10,7 @@ import KebabCaseSwapper from "./KebabCaseSwapper";
 import PascalCaseSwapper from "./PascalCaseSwapper";
 import PathCaseSwapper from "./PathCaseSwapper";
 import SentenceCaseSwapper from "./SentenceCaseSwapper";
+import SnakeCaseSwapper from "./SnakeCaseSwapper";
 
 class CaseSwapperFactory {
   private static CASE_SWAPPERS_BY_TEXT_CASE = {
@@ -23,6 +24,7 @@ class CaseSwapperFactory {
     [TextCase.Pascal]: new PascalCaseSwapper(),
     [TextCase.Path]: new PathCaseSwapper(),
     [TextCase.Sentence]: new SentenceCaseSwapper(),
+    [TextCase.Snake]: new SnakeCaseSwapper(),
   };
 
   public getCaseSwapper(textCase: TextCase): CaseSwapper {
