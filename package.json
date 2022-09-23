@@ -1,0 +1,19 @@
+{
+  "name": "sc",
+  "version": "0.0.0",
+  "description": "A CLI tool to swap between cases",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielbarker/sc.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gabrielbarker/sc/issues"
+  },
+  "homepage": "https://github.com/gabrielbarker/sc#readme"
+}
