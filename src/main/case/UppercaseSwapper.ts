@@ -5,3 +5,5 @@ class UppercaseSwapper implements CaseSwapper {
     return text.toUpperCase();
   }
 }
+
+export default UppercaseSwapper;

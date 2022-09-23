@@ -5,3 +5,5 @@ class LowercaseSwapper implements CaseSwapper {
     return text.toLowerCase();
   }
 }
+
+export default LowercaseSwapper;
