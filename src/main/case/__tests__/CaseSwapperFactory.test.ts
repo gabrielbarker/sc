@@ -1,91 +1,91 @@
 import CaseSwapperFactory from "../CaseSwapperFactory";
-import TextCase from "../TextCase";
+import { Cases } from "../TextCase";
 import * as swapper from "../swapper";
 
 describe("CaseSwapperFactory", () => {
   describe("getCaseSwapper", () => {
-    it("with 'TextCase.Uppercase' returns UppercaseSwapper", () => {
+    it("with 'Cases.Upper' returns UppercaseSwapper", () => {
       // Given
       const factory = new CaseSwapperFactory();
       // When, Then
-      expect(factory.getCaseSwapper(TextCase.Upper)).toBeInstanceOf(swapper.UppercaseSwapper);
+      expect(factory.getCaseSwapper(Cases.Upper)).toBeInstanceOf(swapper.UppercaseSwapper);
     });
 
-    it("with 'TextCase.Lowercase' returns LowercaseSwapper", () => {
+    it("with 'Cases.Lower' returns LowercaseSwapper", () => {
       // Given
       const factory = new CaseSwapperFactory();
       // When, Then
-      expect(factory.getCaseSwapper(TextCase.Lower)).toBeInstanceOf(swapper.LowercaseSwapper);
+      expect(factory.getCaseSwapper(Cases.Lower)).toBeInstanceOf(swapper.LowercaseSwapper);
     });
 
-    it("with 'TextCase.TitleCase' returns TitleCaseSwapper", () => {
+    it("with 'Cases.Title' returns TitleCaseSwapper", () => {
       // Given
       const factory = new CaseSwapperFactory();
       // When, Then
-      expect(factory.getCaseSwapper(TextCase.Title)).toBeInstanceOf(swapper.TitleCaseSwapper);
+      expect(factory.getCaseSwapper(Cases.Title)).toBeInstanceOf(swapper.TitleCaseSwapper);
     });
 
-    it("with 'TextCase.CamelCase' returns CamelCaseSwapper", () => {
+    it("with 'Cases.Camel' returns CamelCaseSwapper", () => {
       // Given
       const factory = new CaseSwapperFactory();
       // When, Then
-      expect(factory.getCaseSwapper(TextCase.Camel)).toBeInstanceOf(swapper.CamelCaseSwapper);
+      expect(factory.getCaseSwapper(Cases.Camel)).toBeInstanceOf(swapper.CamelCaseSwapper);
     });
 
-    it("with 'TextCase.ConstantCase' returns ConstantCaseSwapper", () => {
+    it("with 'Cases.Constant' returns ConstantCaseSwapper", () => {
       // Given
       const factory = new CaseSwapperFactory();
       // When, Then
-      expect(factory.getCaseSwapper(TextCase.Constant)).toBeInstanceOf(swapper.ConstantCaseSwapper);
+      expect(factory.getCaseSwapper(Cases.Constant)).toBeInstanceOf(swapper.ConstantCaseSwapper);
     });
 
-    it("with 'TextCase.DotCase' returns DotCaseSwapper", () => {
+    it("with 'Cases.Dot' returns DotCaseSwapper", () => {
       // Given
       const factory = new CaseSwapperFactory();
       // When, Then
-      expect(factory.getCaseSwapper(TextCase.Dot)).toBeInstanceOf(swapper.DotCaseSwapper);
+      expect(factory.getCaseSwapper(Cases.Dot)).toBeInstanceOf(swapper.DotCaseSwapper);
     });
 
-    it("with 'TextCase.KebabCase' returns KebabCaseSwapper", () => {
+    it("with 'Cases.Kebab' returns KebabCaseSwapper", () => {
       // Given
       const factory = new CaseSwapperFactory();
       // When, Then
-      expect(factory.getCaseSwapper(TextCase.Kebab)).toBeInstanceOf(swapper.KebabCaseSwapper);
+      expect(factory.getCaseSwapper(Cases.Kebab)).toBeInstanceOf(swapper.KebabCaseSwapper);
     });
 
-    it("with 'TextCase.PascalCase' returns PascalCaseSwapper", () => {
+    it("with 'Cases.Pascal' returns PascalCaseSwapper", () => {
       // Given
       const factory = new CaseSwapperFactory();
       // When, Then
-      expect(factory.getCaseSwapper(TextCase.Pascal)).toBeInstanceOf(swapper.PascalCaseSwapper);
+      expect(factory.getCaseSwapper(Cases.Pascal)).toBeInstanceOf(swapper.PascalCaseSwapper);
     });
 
-    it("with 'TextCase.PathCase' returns PathCaseSwapper", () => {
+    it("with 'Cases.Path' returns PathCaseSwapper", () => {
       // Given
       const factory = new CaseSwapperFactory();
       // When, Then
-      expect(factory.getCaseSwapper(TextCase.Path)).toBeInstanceOf(swapper.PathCaseSwapper);
+      expect(factory.getCaseSwapper(Cases.Path)).toBeInstanceOf(swapper.PathCaseSwapper);
     });
 
-    it("with 'TextCase.SentenceCase' returns SentenceCaseSwapper", () => {
+    it("with 'Cases.Sentence' returns SentenceCaseSwapper", () => {
       // Given
       const factory = new CaseSwapperFactory();
       // When, Then
-      expect(factory.getCaseSwapper(TextCase.Sentence)).toBeInstanceOf(swapper.SentenceCaseSwapper);
+      expect(factory.getCaseSwapper(Cases.Sentence)).toBeInstanceOf(swapper.SentenceCaseSwapper);
     });
 
-    it("with 'TextCase.SnakeCase' returns SnakeCaseSwapper", () => {
+    it("with 'Cases.Snake' returns SnakeCaseSwapper", () => {
       // Given
       const factory = new CaseSwapperFactory();
       // When, Then
-      expect(factory.getCaseSwapper(TextCase.Snake)).toBeInstanceOf(swapper.SnakeCaseSwapper);
+      expect(factory.getCaseSwapper(Cases.Snake)).toBeInstanceOf(swapper.SnakeCaseSwapper);
     });
 
-    it("with 'TextCase.InvertCase' returns InvertCaseSwapper", () => {
+    it("with 'Cases.Invert' returns InvertCaseSwapper", () => {
       // Given
       const factory = new CaseSwapperFactory();
       // When, Then
-      expect(factory.getCaseSwapper(TextCase.Invert)).toBeInstanceOf(swapper.InvertCaseSwapper);
+      expect(factory.getCaseSwapper(Cases.Invert)).toBeInstanceOf(swapper.InvertCaseSwapper);
     });
   });
 });
