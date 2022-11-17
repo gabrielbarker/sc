@@ -1,18 +1,16 @@
-enum TextCase {
-  Upper,
-  Lower,
-  Title,
-  Camel,
-  Constant,
-  Dot,
-  Kebab,
-  Pascal,
-  Path,
-  Sentence,
-  Snake,
-  Invert,
-  // LowerFirst,
-  // UpperFirst,
-}
+export const Cases = {
+  Upper: "upper",
+  Lower: "lower",
+  Title: "title",
+  Camel: "camel",
+  Constant: "constant",
+  Dot: "dot",
+  Kebab: "kebab",
+  Pascal: "pascal",
+  Path: "path",
+  Sentence: "sentence",
+  Snake: "snake",
+  Invert: "invert",
+} as const;
 
-export default TextCase;
+export type TextCase = typeof Cases[keyof typeof Cases];
