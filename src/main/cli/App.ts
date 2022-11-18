@@ -11,18 +11,8 @@ class App {
   }
 
   public swap(text: string, parameters: Parameters): void {
-    text = text || App.getStandardInput().trim();
     const swapped = new CaseSwapperFactory().getCaseSwapper(parameters.case).swap(text);
     App.display.print(swapped);
-  }
-
-  private static getStandardInput(): string {
-    try {
-      return fs.readFileSync(process.stdin.fd, "utf-8");
-    } catch (err) {
-      App.display.print("supply valid text");
-      process.exit(1);
-    }
   }
 }
 
