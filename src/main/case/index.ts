@@ -1,4 +1,4 @@
 import CaseSwapperFactory from "./CaseSwapperFactory";
-import TextCase from "./TextCase";
+import { Cases, TextCase } from "./TextCase";
 
-export { CaseSwapperFactory, TextCase };
+export { CaseSwapperFactory, Cases, TextCase };
