@@ -16,4 +16,11 @@ describe("Display", () => {
     // Then
     expect(mockLog).toBeCalledWith(text);
   });
+
+  it("'isCalledViaPipe' returns false when `process.stdin.isTTY` is true", async () => {
+    // Given
+    const display = new Display();
+    // When, Then
+    expect(display.isCalledViaPipe()).toEqual(!process.stdin.isTTY);
+  });
 });
