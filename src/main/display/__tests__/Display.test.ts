@@ -1,10 +1,10 @@
 import Display from "../Display";
 
+const realLog = console.log;
 const mockLog = jest.fn();
 
-beforeEach(() => {
-  console.log = mockLog;
-});
+beforeEach(() => (console.log = mockLog));
+afterEach(() => (console.log = realLog));
 
 describe("Display", () => {
   it("'print' calls `console.log`", async () => {
