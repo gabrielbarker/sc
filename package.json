@@ -6,8 +6,7 @@
   "scripts": {
     "test": "jest --coverage",
     "app": "npm run build && npm run execute",
-    "build": "tsc",
-    "execute": "node out/index.js"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -26,6 +25,6 @@
     "typescript": "^4.8.3"
   },
   "dependencies": {
-    "commander": "^9.4.1"
+    "yargs": "^17.6.2"
   }
 }

@@ -1,23 +1,61 @@
 import CLI from "../CLI";
 
 const mockParse = jest.fn();
-jest.mock("../CommandFactory", () => {
+jest.mock("../ArgumentParser", () => {
   return jest.fn().mockImplementation(() => ({
-    createCommand: jest.fn().mockImplementation(() => ({
-      parse: mockParse,
+    parse: mockParse,
+  }));
+});
+const mockLine = "TEST LINE";
+jest.mock("readline", () => {
+  return {
+    createInterface: jest.fn().mockImplementation(() => ({
+      on: jest.fn().mockImplementation((event, fn) => fn(mockLine)),
+      once: jest.fn().mockImplementation((event, fn) => fn()),
     })),
+  };
+});
+
+const mockSwappedValue = "swapped";
+jest.mock("../App", () => {
+  return jest.fn().mockImplementation(() => ({
+    swap: jest.fn().mockImplementation((args) => mockSwappedValue),
+  }));
+});
+const mockPrint = jest.fn();
+const mockIsPiped = jest.fn().mockImplementation(() => false);
+jest.mock("../../display/Display", () => {
+  return jest.fn().mockImplementation(() => ({
+    print: mockPrint,
+    isCalledViaPipe: mockIsPiped,
   }));
 });
 
-const args = ["Argument 1", "Argument 2", "Argument 3"];
+const args = ["Argument 1", "Argument 2"];
 
 describe("CLI", () => {
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
   it("'run' calls parse method on program", async () => {
     // Given
     const cli = new CLI();
     // When
-    cli.run(args);
-    // Then
-    expect(mockParse).toBeCalled();
+    cli.run(args).then(() => {
+      // Then
+      expect(mockPrint).toBeCalledWith(mockSwappedValue);
+    });
+  });
+
+  it("'run' gets piped data when called via pipe", async () => {
+    mockIsPiped.mockImplementation(() => true);
+    // Given
+    const cli = new CLI();
+    // When
+    cli.run(args).then(() => {
+      // Then
+      expect(mockParse).toBeCalled();
+      expect(mockParse.mock.calls[0][0][0]).toEqual(mockLine);
+    });
   });
 });

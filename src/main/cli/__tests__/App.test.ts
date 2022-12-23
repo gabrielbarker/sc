@@ -1,5 +1,5 @@
 import App from "../App";
-import Parameters from "../Parameters";
+import Arguments from "../Arguments";
 
 const swappedValue = "SWAPPED VALUE";
 const mockPrint = jest.fn();
@@ -19,8 +19,8 @@ describe("App", () => {
     // Given
     const app = new App();
     // When
-    app.swap("TEST", { case: "camel" } as Parameters);
+    const swapped = app.swap({ case: "camel", text: "TEST" } as Arguments);
     // Then
-    expect(mockPrint).toBeCalled();
+    expect(swapped).toEqual(swappedValue);
   });
 });

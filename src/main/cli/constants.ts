@@ -1,18 +1,30 @@
 import { Cases } from "../case";
 
-const caseFlags = "-c, --case <case>";
+const textFlag = "text";
+const textDescription = "the text to swap the case of";
+
+const caseAbbreviated = "c";
+const caseFlag = "case";
 const caseDescription = "case to swap to";
 const caseOptions = Object.values(Cases);
 
-const textArgumentName = "[text]";
-const textArgumentDescription = "text to switch the case of";
+const helpAbbreviated = "h";
+const helpFlag = "help";
+
+const command = `$0 <${textFlag}> [..options]`;
+const description = `Swap the case of ${textFlag}`;
 
 const CONSTANTS = {
-  caseFlags,
+  textFlag,
+  textDescription,
+  caseAbbreviated,
+  caseFlag,
   caseDescription,
   caseOptions,
-  textArgumentName,
-  textArgumentDescription,
+  helpAbbreviated,
+  helpFlag,
+  command,
+  description,
 };
 
 export default CONSTANTS;

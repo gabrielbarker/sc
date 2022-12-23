@@ -4,6 +4,7 @@ module.exports = {
     "^.+\\.tsx?$": "ts-jest",
   },
   collectCoverage: true,
+  collectCoverageFrom: ["src/main/**", "!**/__tests__/**"],
   coverageThreshold: {
     global: {
       branches: 95,
