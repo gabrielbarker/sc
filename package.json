@@ -6,8 +6,7 @@
   "scripts": {
     "test": "jest --coverage",
     "app": "npm run build && npm run execute",
-    "build": "tsc",
-    "execute": "node out/index.js"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
