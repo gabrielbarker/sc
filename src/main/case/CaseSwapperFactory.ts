@@ -15,6 +15,7 @@ class CaseSwapperFactory {
     sentence: new swapper.SentenceCaseSwapper(),
     snake: new swapper.SnakeCaseSwapper(),
     invert: new swapper.InvertCaseSwapper(),
+    rage: new swapper.RageCaseSwapper(),
   };
 
   public getCaseSwapper(textCase: TextCase): swapper.CaseSwapper {

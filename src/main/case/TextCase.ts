@@ -11,6 +11,7 @@ export const Cases = {
   Sentence: "sentence",
   Snake: "snake",
   Invert: "invert",
+  Rage: "rage",
 } as const;
 
-export type TextCase = typeof Cases[keyof typeof Cases];
+export type TextCase = (typeof Cases)[keyof typeof Cases];
