@@ -20,6 +20,7 @@ const basicSentence: TestCase = {
     { case: "sentence", value: "The birch canoe slid on the smooth planks" },
     { case: "snake", value: "the_birch_canoe_slid_on_the_smooth_planks" },
     { case: "invert", value: "THE BIRCH CANOE SLID ON THE SMOOTH PLANKS" },
+    { case: "rage", value: "tHe bIrCh cAnOe sLiD On tHe sMoOtH PlAnKs" },
   ],
 };
 
@@ -39,6 +40,7 @@ const camelCaseString: TestCase = {
     { case: "sentence", value: "Camel case string" },
     { case: "snake", value: "camel_case_string" },
     { case: "invert", value: "CAMELcASEsTRING" },
+    { case: "rage", value: "cAmElCaSeStRiNg" },
   ],
 };
 
@@ -58,6 +60,7 @@ const constantCaseString: TestCase = {
     { case: "sentence", value: "Constant case string" },
     { case: "snake", value: "constant_case_string" },
     { case: "invert", value: "constant_case_string" },
+    { case: "rage", value: "cOnStAnT_CaSe_sTrInG" },
   ],
 };
 
