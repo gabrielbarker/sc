@@ -11,6 +11,7 @@ import PathCaseSwapper from "./PathCaseSwapper";
 import SentenceCaseSwapper from "./SentenceCaseSwapper";
 import SnakeCaseSwapper from "./SnakeCaseSwapper";
 import InvertCaseSwapper from "./InvertCaseSwapper";
+import RageCaseSwapper from "./RageCaseSwapper";
 
 export {
   CaseSwapper,
@@ -26,4 +27,5 @@ export {
   SentenceCaseSwapper,
   SnakeCaseSwapper,
   InvertCaseSwapper,
+  RageCaseSwapper,
 };
