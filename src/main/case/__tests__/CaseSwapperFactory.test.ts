@@ -87,5 +87,12 @@ describe("CaseSwapperFactory", () => {
       // When, Then
       expect(factory.getCaseSwapper(Cases.Invert)).toBeInstanceOf(swapper.InvertCaseSwapper);
     });
+
+    it("with 'Cases.Rage' returns RageCaseSwapper", () => {
+      // Given
+      const factory = new CaseSwapperFactory();
+      // When, Then
+      expect(factory.getCaseSwapper(Cases.Rage)).toBeInstanceOf(swapper.RageCaseSwapper);
+    });
   });
 });
